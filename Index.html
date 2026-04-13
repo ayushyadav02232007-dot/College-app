@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">B.Tech Connect</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Feed</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+        <button id="authBtn" class="btn">Log In</button>
+    </nav>
+
+    <main class="container">
+        
+        <section class="create-post">
+            <textarea id="postContent" placeholder="Share an update, lab photo, or resource..."></textarea>
+            <div class="post-actions">
+                <input type="file" id="mediaUpload" accept="image/*,video/*" style="display: none;">
+                <label for="mediaUpload" class="btn btn-secondary">Add Media</label>
+                <button id="submitPost" class="btn">Post</button>
+            </div>
+        </section>
+
+        <section id="feed" class="feed">
+            <div class="post card">
+                <div class="post-header">
+                    <strong>Rahul S.</strong> 
+                    <span class="badge branch">Computer Science</span>
+                    <span class="badge college">NIT</span>
+                </div>
+                <div class="post-body">
+                    Looking for a teammate for an upcoming hackathon! We are building a real-time web dashboard using HTML/CSS/JS and Firebase to control an ESP8266 relay. Need someone good with JavaScript.
+                </div>
+                <div class="post-footer">
+                    <button class="btn btn-sm">👍 Upvote (12)</button>
+                    <button class="btn btn-sm">💬 Comment (3)</button>
+                    <a href="https://github.com" target="_blank">🔗 GitHub</a>
+                </div>
+            </div>
+
+            <div class="post card">
+                <div class="post-header">
+                    <strong>Priya M.</strong>
+                    <span class="badge branch">Electronics</span>
+                    <span class="badge college">IIIT</span>
+                </div>
+                <div class="post-body">
+                    [FOR SALE] Selling my STM32 G474 development board. Barely used during my last internship. DM on WhatsApp if interested!
+                </div>
+                <div class="post-footer">
+                    <button class="btn btn-sm">👍 Upvote (5)</button>
+                    <button class="btn btn-sm">💬 Comment (1)</button>
+                    <a href="#" target="_blank">📱 WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="post card">
+                <div class="post-header">
+                    <strong>Amit K.</strong>
+                    <span class="badge branch">Information Tech</span>
+                    <span class="badge college">VIT</span>
+                </div>
+                <div class="post-body">
+                    Finally managed to implement Quicksort and Merge sort in C++ for my Data Structures assignment! If anyone needs the resource links I used, let me know.
+                </div>
+                <div class="post-footer">
+                    <button class="btn btn-sm">👍 Upvote (24)</button>
+                    <button class="btn btn-sm">💬 Comment (8)</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
